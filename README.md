@@ -1,4 +1,4 @@
-# AlbumMaker
-By: Kyle Anderson and Karan Rai
+# Supernovae Project
+By: Kyle Anderson
 
-Makes albums
+A project on Supernovae for Wanderers in Space.
