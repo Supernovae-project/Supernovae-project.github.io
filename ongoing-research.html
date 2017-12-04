@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Supernovae</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style-overview.css">
+    <link rel="stylesheet" type="text/css" href="style-research.css">
+    <script src="sourcing.js"></script>
+  </head>
+  <body>
+    <div class="full">
+      <div class="top top-path"><h1>Supernovae</h1><h4>Ongoing Research</h4><a href="index.html">Home</a></div>
+      <div class="main">
+        <video autoplay loop class= "nebula_vid">
+           <source src="nebula.mp4" type="video/mp4">
+        </video>
+        <div id="r-left">
+          <div id="r-top" class="box">
+            <button class="b" onclick="reveal(0)">The "Zombie Star"</button>
+            <div class="hidden">
+              <!-- <h4>The "Zombie Star"</h4> -->
+              <p>
+                The "Zombie Star"<sup onclick="source('parks')">Source</sup>
+                is potentially a star which has had a supernova explosion more than once.
+                Supernova
+                iPTF14hls was observed in Sept., 2014; over the next two years
+                it oscilated in brightness, which
+                was both far longer than the normal 100 days of a Supernova and followed an erratic brightnes pattern.
+                What made it even more interesting was that a Supernova was recorded in 1954 in the exact same
+                location leading scientists to postulate it could have been the same star.<sup onclick="source('tasoff')">Source</sup>
+                One theory postulates that multiple supernovae could be possible if the initial
+                star was so hot and massive it formed antimatter in its core leading to unstable and unpredictable
+                explosive events.<sup onclick="source('parks')">Source</sup>
+                Another thought is that the event was a transfer of energy from the remaining
+                neutron star's enormous magnetic field spinning at 1000 times per second.<sup onclick="source('billings')">Source</sup>
+              </p>
+              <button class="sub-b" onclick="hide(0)">Hide</button>
+            </div>
+          </div>
+          <div id="r-middle" class="box">
+            <button class="b" onclick="reveal(1)">"Fake" Supernova</button>
+            <div class="hidden">
+              <!--<h4>"Fake" Supernova</h4> -->
+              <p>In June, 2015, scientists working on the ASASSN Project spotted
+                a luminous event, which was believed to be the brightest Supernova
+                ever witnessed in recorded history.
+                The event was 20 times more luminous than the entire Milky Way Galaxy. <sup onclick="source('mack-supernova')">Source</sup>
+                Nothing as bright had been recorded so scientists came up with different theories about
+                how it could have occured. One such theory was that the event was not actually
+                the Supernova's initial explosion but transfer of energy from the remaining
+                neutron star's enormous magnetic field spinning at 1000 times per second.<sup onclick="source('billings')">Source</sup>
+                However, a new theory suggests that the event was caused by a tidal disruption
+                when a very high mass star was torn apart by a supermassive black hole.<sup onclick="source('mack-black')">Source</sup>
+              </p>
+              <button class="sub-b" onclick="hide(1)">Hide</button>
+            </div>
+          </div>
+          <div id="r-bottom" class="box">
+            <button class="b" onclick="reveal(2)">Betelgeuse Goes Supernova?</button>
+            <div class="hidden">
+              <!--<h4>Betelgeuse Goes Supernova?</h4>-->
+              <p>
+                Betelgeuse is the nearest star in our sky likely to go supernova. It is already
+                one of the brightest stars in the sky and its proximity and its age means that
+                it could potentially explode in our lifetime. If it does it will be the brightest
+                object during the night, perhaps even brighter than the moon according to some
+                scientists, and it will be visible in that state for more than a year.
+                Why can't we tell when it will go supernova? The main problem is that scientists
+                do not have the potential currently to detect neutrinos at the distance
+                Betelgeuse is from Earth.<sup onclick="source('siegal')">Source</sup>
+              </p>
+              <button class="sub-b" onclick="hide(2)">Hide</button>
+            </div>
+          </div>
+        </div>
+        <div id="r-right" class="box">
+          <img id="img-r" alt="Artists Rendition of a Supernova" src="https://cnet3.cbsistatic.com/img/UoYP9BxWYqi4Q1k1-pr5QTSks4c=/2016/01/14/6c3fea8d-08a9-4e47-adc7-c348404d466c/106524.jpg"/>
+          <div id="div-sup-click">
+            <sup id="sup-click" onclick="call_source(0)">Source</sup>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <a id="home" href="index.html">Home</a>
+        <h4>Created By: Kyle Anderson</h4>
+        <a id="work-cited" href="work-cited.html">Work Cited</a>
+      </div>
+    </div>
+    <script>
+      function call_source(val){
+        if (val == 0) {
+          source("mack-supernova");
+        } else if (val == 1){
+          source("tasoff");
+        } else if (val == 2){
+          source("siegal");
+        } else {
+          source("mack-supernova");
+        }
+      }
+      function reveal(val) {
+        var b = document.getElementsByClassName("b");
+        b[val].style.display = "none";
+        var h = document.getElementsByClassName("hidden");
+        h[val].style.display = "flex";
+        if (val == 0) {
+          document.getElementById("img-r").src = "https://img.purch.com/w/640/aHR0cDovL3d3dy5zcGFjZS5jb20vaW1hZ2VzL2kvMDAwLzA3MS82MTkvaTAyL21hZ25ldGFyLXdlc3Rlcmx1bmQtMS1hcnQuanBnPzE1MTAxNjE1ODY=";
+          document.getElementById("div-sup-click").innerHTML = "<sup id='sup-click' onclick='call_source(1)''>Source</sup>";
+        } else if (val == 1) {
+          document.getElementById("img-r").src = "https://cnet3.cbsistatic.com/img/GVkFGfbntEPxntylBcxle67ZxFg=/2016/01/14/27ce0484-144b-4daa-852f-2fbf0335152a/106525.jpg";
+          document.getElementById("div-sup-click").innerHTML = "<sup id='sup-click' onclick='call_source(2)''>Source</sup>";
+        } else {
+          document.getElementById("img-r").src = "https://blogs-images.forbes.com/startswithabang/files/2017/03/Orions_Big_Head_Revealed_in_Infrared-1200x1116.jpg?width=960";
+          document.getElementById("div-sup-click").innerHTML = "<sup id='sup-click' onclick='call_source(0)''>Source</sup>";
+        }
+      }
+      function hide(val) {
+        var b = document.getElementsByClassName("b");
+        b[val].style.display = "flex";
+        var h = document.getElementsByClassName("hidden");
+        h[val].style.display = "none";
+        document.getElementById("img-r").src = "https://cnet3.cbsistatic.com/img/UoYP9BxWYqi4Q1k1-pr5QTSks4c=/2016/01/14/6c3fea8d-08a9-4e47-adc7-c348404d466c/106524.jpg";
+        document.getElementById("div-sup-click").innerHTML = "<sup id='sup-click' onclick='call_source(0)''>Source</sup>";
+      }
+    </script>
+  </body>
+</html>

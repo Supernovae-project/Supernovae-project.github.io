@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Supernovae</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style-overview.css">
+    <link rel="stylesheet" type="text/css" href="style-importance.css">
+    <script src="sourcing.js"></script>
+  </head>
+  <body>
+    <div class="full">
+      <div class="top top-path"><h1>Supernovae</h1><h4>Importance</h4><a href="ongoing-research.html">See Ongoing Research next</a></div>
+      <div class="main">
+        <video autoplay loop class= "nebula_vid">
+           <source src="nebula.mp4" type="video/mp4">
+        </video>
+        <div id="i-top" class="box">
+          <button class="b" onclick="reveal(0)">Life on Earth</button>
+          <div class="hidden">
+            <h4>Life on Earth</h4>
+            <p>
+              Life on Earth would not be possible without the existence and abundance of many
+              different elements some of which are heavier than those which can be produced by
+              low to intermediate mass stars. Supernova shoot out many of the heavier elements
+              produced by high mass stars such as iron, oxygen and nitrogen all of which are
+              vital to life on Earth.<sup onclick="source('bennet')">Source</sup>
+            </p>
+            <br>
+            <p>
+              However, a recent study by Danish scientist Professor Henrik Svensmark
+              has concluded that supernovae may also be correlated with increasing biodiversity
+              on Earth. Svensmark's research matched fossil data
+              with astronomical history of when the Sun was closer to parts of the Milky Way where
+              Supernovae are more common. In Svensmark's conclusions, when the Sun was closer to
+              supernovae-common regions, biodiversity increased. His reasoning is that cold climates
+              are associated with high supernovae rates and this brought a greater variety of habitats
+              on Earth leading to greater evolutionary experimentation.<sup onclick="source('massey')">Source</sup>
+            </p>
+            <button class="sub-b" onclick="hide(0)">Hide</button>
+          </div>
+        </div>
+        <div id="i-bottom">
+          <div id="i-left" class="box">
+            <button class="b" onclick="reveal(1)">Cosmic Distances</button>
+            <div class="hidden">
+              <h4>Cosmic Distances</h4>
+              <p>
+                Type Ia Supernovae are both very common and very consistent in the
+                amount of energy released during an explosion. Because of this, they
+                are very useful for scientists to measure cosmic distances and therefore
+                better understand the relative location of other galaxies, solar systems,
+                and stars from Earth.<sup onclick="source('nave')">Source</sup>
+              </p>
+              <br>
+              <p> This also gives scientists evidence to explain that the universe is
+                expanding at an increasing rate.<sup onclick="source('may')">Source</sup>
+              </p>
+              <button class="sub-b" onclick="hide(1)">Hide</button>
+            </div>
+          </div>
+          <div id="i-right" class="box">
+            <button class="b" onclick="reveal(2)">Materials Produced</button>
+            <div class="hidden">
+              <h4>Materials Produced</h4>
+              <p>
+                High mass stars are very important to the universe's elemental diversity because
+                their high mass cores create greater temperatures and thus can fuse heavier elements
+                than low-mass stars.<sup onclick="source('bennet')">Source</sup> However, these elements remain concentrated in the high mass star.
+                Supernovae play a key role in expelling these elements away from the star and distributing
+                elements through interstellar space thus increasing the possibilities for wanderers in space.
+              </p>
+              <br>
+              <p>Scientists now believe that a supernova explosion was very important in the creation
+                of our solar system. Recent research has said that shock waves from a supernova explosion may have condensed
+                portions of the solar nebula that was the parent of our solar system. Additionally, the supernova
+                may have brought with it new heavier elements originally not found in the nebula. Evidence for this
+                theory was found when analyzing radioactive isotopes from meteorites.<sup onclick="source('choi')">Source</sup>
+              </p>
+              <button class="sub-b" onclick="hide(2)">Hide</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <a id="home" href="index.html">Home</a>
+        <h4>Created By: Kyle Anderson</h4>
+        <a id="work-cited" href="work-cited.html">Work Cited</a>
+      </div>
+    </div>
+    <script>
+      function reveal(val) {
+        var b = document.getElementsByClassName("b");
+        b[val].style.display = "none";
+        var h = document.getElementsByClassName("hidden");
+        h[val].style.display = "flex";
+      }
+      function hide(val) {
+        var b = document.getElementsByClassName("b");
+        b[val].style.display = "flex";
+        var h = document.getElementsByClassName("hidden");
+        h[val].style.display = "none";
+      }
+    </script>
+  </body>
+</html>

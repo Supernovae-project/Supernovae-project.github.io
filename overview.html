@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Supernovae</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style-overview.css">
+    <script src="sourcing.js"></script>
+  </head>
+  <body>
+    <div class="full">
+      <div class="top top-path">
+        <h1>Supernovae</h1>
+        <h4>Overview</h4>
+        <a href="types.html">See Types next</a>
+      </div>
+      <div class="main">
+        <video autoplay loop class= "nebula_vid">
+           <source src="nebula.mp4" type="video/mp4">
+        </video>
+        <div id="o-left">
+          <div class="box" id="o-top">
+            <button class="b" onclick="reveal(0)">What are they?</button>
+            <div class="hidden">
+              <h4>What are they?</h4>
+              <p>Supernovae are massive explosions of a star that occur in one of two
+                situations (see <a href="types.html">Types</a>). In the first type,
+                a white dwarf accretes matter from its companion star in a binary system.
+                When it accretes enough matter, it explodes in a massive burst of energy
+                and it shoots a great deal of matter away. In the second type, a high-mass
+                star at the end of its life is no longer able to resist the crush of gravity.
+                In an instant, the core compresses into a ball of neutrons and releases
+                a wave of energy that blasts away its outer layers, sending them
+                into interstellar space.<sup onclick="source('bennet')">Source</sup>
+                Supernovae are among the brightest events that can be witnessed in
+                our universe. On this website, you will learn all about why they occur,
+                why they are important, and the cutting edge research and observations
+                scientists have made about them.
+              </p>
+              <button class="sub-b" onclick="hide(0)">Hide</button>
+            </div>
+          </div>
+          <div class="box" id="o-bottom">
+            <button class="b" onclick="reveal(1)">Power of the Explosion</button>
+            <div class="hidden">
+              <h4>Power of the Explosion</h4>
+              <p>Supernovae are some of the most destructive outbursts of energy
+                that have been observed in the universe. They release observable
+                radio waves and x-rays<sup onclick="source('britannica')">Source</sup> as well as
+                observable rays of cosmic particles such as neutrinos.<sup onclick="source('bennet')">Source</sup>
+                The explosion can often times grow more luminous than its galaxy, a rather
+                stellar achievement.<sup onclick="source('britannica')">Source</sup>
+                A more visual way of understanding how powerful these explosions are is
+                looking at what remains after a supernova has exploded. It will leave behind
+                a Supernova remnant, a cloud of gas, that moves through interstellar space away
+                from the origin of the explosion at thousands to millions of kilometers per second.<sup onclick="source('bennet')">Source</sup>
+                This heated cloud of gas is visible as a nebula, for instance the <a class="link" href="https://upload.wikimedia.org/wikipedia/commons/0/00/Crab_Nebula.jpg" >crab nebula</a>
+                was born from a Supernova explosion.
+              </p>
+              <button class="sub-b" onclick="hide(1)">Hide</button>
+            </div>
+          </div>
+        </div>
+        <div id="o-right">
+          <div class="box" id="o-top">
+            <button class="b" onclick="reveal(2)">Discovery</button>
+            <div class="hidden">
+              <h4>Discovery</h4>
+              <p>
+                Supernovae are interesting historically because they have been recorded
+                for a long time. In 1054, Chinese and Korean observers noted a bright
+                spot in the sky near the constellation Taurus. This was later recognized
+                as a Supernova when scientists found the Crab Nebula in that location with a
+                spinning neutron star at its center, a remnant of a Type II supernova.<sup onclick="source('britannica')">Source</sup>
+                Then famously Johannes Keppler observed a visible bright spot in the sky
+                in 1604 and recorded the event. This Supernova was so powerful that its remnant
+                is expanding at 4 million miles per hour.<sup onclick="source('cooper')">Source</sup>
+                Modern scientists however can see supernova that occur much farther away and that
+                are not visible to the naked eye through the use of telescopes and observatories.
+              </p>
+              <button class="sub-b" onclick="hide(2)">Hide</button>
+            </div>
+          </div>
+          <div class="box" id="o-bottom">
+            <button class="b" onclick="reveal(3)">How do we know what we know?</button>
+            <div class="hidden">
+              <h4>How do we know what we know?</h4>
+              <p>
+                Observational has shown that there are uniquely massive explosions in the universe
+                that must be due to some circumstances. Scientists analyze these circumstances by looking
+                at the spectrum released by a these explosions, allowing them to determine which elements
+                and their respecitve quantities make up the observable light.<sup onclick="source('nave')">Source</sup> From this, they can 
+                put data into working understanding of how stars work based upon our understanding of their
+                composition and how physics operates under stellar conditions. For instance, the existence of
+                heavier elements in the universe at a greater than expected amount can be explained by the results
+                of supernova.<sup onclick="source('britannica')">Source</sup>
+              </p>
+              <button class="sub-b" onclick="hide(3)">Hide</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <a id="home" href="index.html">Home</a>
+        <h4>Created By: Kyle Anderson</h4>
+        <a id="work-cited" href="work-cited.html">Work Cited</a>
+      </div>
+    </div>
+    <script>
+      function reveal(val) {
+        var b = document.getElementsByClassName("b");
+        b[val].style.display = "none";
+        var h = document.getElementsByClassName("hidden");
+        h[val].style.display = "flex";
+      }
+      function hide(val) {
+        var b = document.getElementsByClassName("b");
+        b[val].style.display = "flex";
+        var h = document.getElementsByClassName("hidden");
+        h[val].style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+#o-left {
+  margin:0px;
+  padding:0px;
+  flex: .5 .5 50%;
+  //border: 1px solid black;
+  //border-radius: 3pt;
+  order: 1;
+  display:flex;
+  flex-flow: column;
+}
+#o-right {
+  margin:0px;
+  padding:0px;
+  flex: .5 .5 50%;
+  //border: 1px solid black;
+  //border-radius: 3pt;
+  order: 2;
+  display:flex;
+  flex-flow: column;
+}
+#o-top {
+  margin:15px;
+  padding:5px;
+  flex: .5 .5 50%;
+  border: 1px solid white;
+  border-radius: 3pt;
+  order: 1;
+}
+#o-bottom {
+  margin:15px;
+  padding:5px;
+  flex: .5 .5 50%;
+  border: 1px solid white;
+  border-radius: 3pt;
+  order: 2;
+}
+.box {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+.box > button {
+  background: #b915d6;
+  font-size: 1.15rem;
+  color:white;
+  border:none;
+  border-radius: 5px;
+  font-family: 'Righteous', cursive;
+  cursor:pointer;
+}
+.box > button:hover {
+  background: white;
+  color:#b915d6;
+}
+.hidden {
+  margin:0;
+  padding:0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow:column;
+  display:none;
+}
+.hidden > h4 {
+  font-family: 'Righteous', cursive;
+  font-size: 1.5rem;
+  margin:2px;
+  padding:0;
+  color: #b915d6;
+}
+.hidden > p {
+  margin:0;
+  padding:0;
+  font-family: 'Righteous', cursive;
+  font-size:.75rem;
+  color: white;
+}
+.hidden > button {
+  margin:2px;
+  padding:5px;
+  background: #b915d6;
+  font-size: .75rem;
+  color:white;
+  border:none;
+  border-radius: 5px;
+  font-family: 'Righteous', cursive;
+  cursor:pointer;
+}
+.hidden > button:hover {
+  background: white;
+  color: #b915d6;
+}
+.hidden > p > a {
+  margin:2px;
+  padding:3px;
+  border-radius: 3px;
+  background:none;
+}
+.hidden > p > a:hover {
+  text-decoration: underline overline;
+  color:#b915d6;
+}
+sup {
+  color:#b915d6;
+  cursor:pointer;
+}
+sup:hover {
+  color:#b915d6;
+  text-decoration: underline overline;
+}
+.link {
+  text-decoration:underline;
+  color:lightblue;
+}

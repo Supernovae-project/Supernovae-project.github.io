@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Supernovae</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style-overview.css">
+    <link rel="stylesheet" type="text/css" href="style-types.css">
+      <script src="sourcing.js"></script>
+  </head>
+  <body>
+    <div class="full">
+      <div class="top top-path"><h1>Supernovae</h1><h4>Types</h4><a href="importance.html">See Importance next</a></div>
+      <div class="main">
+        <video autoplay loop class= "nebula_vid">
+           <source src="nebula.mp4" type="video/mp4">
+        </video>
+        <div id="t-left" class="box">
+          <button class="b" onclick="reveal(0)">Type I</button>
+          <div id="type-2-img" style="display:none;">
+            <img alt="Type II Supernova Img" src="http://hyperphysics.phy-astr.gsu.edu/hbase/Astro/astpic/Supnov1a.jpg" />
+            <sup onclick="source('nave')">Source</sup>
+          </div>
+          <div class="hidden">
+            <h4>Type I</h4>
+            <p>Supernova are classified by the difference in the pattern of their luminosity
+            over the course of the explosion. Type I supernovae have a sharp increase in their
+            luminosity and then decrease in brightness "smoothly".<sup onclick="source('nave')">Source</sup>
+            Type I supernova are thought to occur when a white dwarf collapses from electron degeneracy pressure
+            and explodes.<sup onclick="source('nave')">Source</sup>
+            </p>
+            <br>
+            <p>
+              Type I supernova are broken into three categories based on existence of strong silicon, helium, or
+              neither. No Type I supernova have hydrogen lines. The model that predicts this is based upon
+              white dwarfs, which are born from low-mass to intermediate-mass stars and are carbon-dominant.
+              If a white dwarf exists in a binary system it may have a strong enough gravity to pull matter
+              from its companion and accrete it onto its surface. When this happens, its total mass increases
+              until it reaches the Chandrasekhar limit of 1.44M<sub>Sun</sub>. At this point, electron degeneracy
+              pressure is unable to resist the dense mass in the white dwarf and it breaks down under the pressure
+              of gravity. When this happens the white dwarf collapses and explodes in a massive eruption. The
+              energy output of this explosion is very similar among observed Type Ia supernovae, ones that exhibit
+              strong silicon spectral lines, and therefore they are more easily identified.<sup onclick="source('nave')">Source</sup>
+            </p>
+            <button class="sub-b" onclick="hide(0)">Hide</button>
+          </div>
+        </div>
+        <div id="t-right" class="box">
+          <button class="b" onclick="reveal(1)">Type II</button>
+          <div id="type-1-img" style="display:none;">
+            <img alt="Type I Supernova Img" src="http://hyperphysics.phy-astr.gsu.edu/hbase/Astro/astpic/accretsn.jpg" />
+            <sup onclick="source('nave')">Source</sup>
+          </div>
+          <div class="hidden">
+            <h4>Type II</h4>
+            <p>
+              In high mass stars, those that are greater than 8M<sub>Sun</sub>,
+              the high core temperature allows for hydrogen to combine with carbon, oxygen, and nitrogen to produce helium.
+              The heaviest element lower-mass stars can produce is carbon. This means that high mass stars can go through
+              progressive stages of fusing increasingly heavy elements.
+              This process will continue until iron begins to build up in a
+              silicon-fusing core. Iron is special because it produces no energy when it undergoes nuclear fusion or fission.
+              This is because these processes only creates energy when the product is lower mass than the combining molecules.
+              Iron is the lowest mass element so fission and fusion will always produce more massive elements thus actually
+              capturing energy not releasing it. When the core becomes iron, it will no longer radiate energy and resist
+              gravitational force.<sup onclick="source('bennet')">Source</sup>
+            </p>
+            <br>
+            <p>
+              Electron degeneracy pressure, quantum-mechanics tells us that electrons will resist being close to one another,
+              will keep the core from total collapse but once it crosses a certain limit, the core will collapse.
+              This happens when the electrons can no longer resist each other and they combine with protons to form
+              neutrons releasing neutrinos, cosmic particles, in the process.
+              The crush of gravity now produces a core collapse that is only halted by neutron degeneracy pressure, leaving
+              a ball of tightly-packed neutrons in a shrunken core.
+              The neutrinos produced from the core collapse shoot outward and drive off the outer layers of the star
+              in a massive release of energy, sending stellar matter into interstellar space.
+              This produces a luminosity as powerful as 10 Billion Suns shining simultaneously.
+              When the gas cloud of the former star begin to cool they will be visible as an expanding nebula.<sup onclick="source('bennet')">Source</sup>
+            </p>
+            <button class="sub-b" onclick="hide(1)">Hide</button>
+          </div>
+        </div>
+      </div>
+      <div class="foot">
+        <a id="home" href="index.html">Home</a>
+        <h4>Created By: Kyle Anderson</h4>
+        <a id="work-cited" href="work-cited.html">Work Cited</a>
+      </div>
+    </div>
+    <script>
+      function reveal(val) {
+        var b = document.getElementsByClassName("b");
+        b[val].style.display = "none";
+        var h = document.getElementsByClassName("hidden");
+        h[val].style.display = "flex";
+        if (val == 0){ // type I selected
+          var other_b = document.getElementsByClassName("b");
+          other_b[1].style.display = "none";
+          var img = document.getElementById("type-1-img");
+          img.style.display = "flex";
+          img.style.flexFlow = "column";
+          img.style.alignItems = "center";
+          img.style.justifyContent = "center";
+          img[0].style.order = "0";
+          img[1].style.order = "1";
+          //var box = document.getElementsByClassName("box");
+          //box[1].style.flexFlow = "column";
+        } else { // type II selected
+          var other_b = document.getElementsByClassName("b");
+          other_b[0].style.display = "none";
+          document.getElementById("type-2-img").style.display = "flex";
+          var img = document.getElementById("type-2-img");
+          img.style.display = "flex";
+          img.style.flexFlow = "column";
+          img.style.alignItems = "center";
+          img.style.justifyContent = "center";
+          img[0].style.order = "0";
+          img[1].style.order = "1";
+          //var box = document.getElementsByClassName("box");
+          //box[0].style.flexFlow = "column";
+        }
+      }
+      function hide(val) {
+        var b = document.getElementsByClassName("b");
+        b[val].style.display = "flex";
+        var h = document.getElementsByClassName("hidden");
+        h[val].style.display = "none";
+        if (val == 0){ // type I selected
+          var other_b = document.getElementsByClassName("b");
+          other_b[1].style.display = "flex";
+          document.getElementById("type-1-img").style.display = "none";
+          //var box = document.getElementsByClassName("box");
+          //box[1].style.flexFlow = "row";
+        } else { // type II selected
+          var other_b = document.getElementsByClassName("b");
+          other_b[0].style.display = "flex";
+          document.getElementById("type-2-img").style.display = "none";
+          //var box = document.getElementsByClassName("box");
+          //box[0].style.flexFlow = "row";
+        }
+      }
+    </script>
+  </body>
+</html>
