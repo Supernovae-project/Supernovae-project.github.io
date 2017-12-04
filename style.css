@@ -18,7 +18,7 @@ html,body {
   flex-flow:column;
   background:black;
 }
-video {
+iframe {
   position: fixed;
   top: 0;
   right: 0;
